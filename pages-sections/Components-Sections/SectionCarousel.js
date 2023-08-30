@@ -50,7 +50,7 @@ export default function SectionCarousel() {
                   data.map((item, i)=> {
                     const {src, name} = item
                     return (
-                      <div>
+                      <div key={i}>
                         <img
                           src={src}
                           alt={name}

@@ -54,7 +54,7 @@ export default function TeamSection() {
             data.map((item,i)=>{
               const {image, alt, title, description} = item
               return (
-                <GridItem xs={12} sm={12} md={4}>
+                <GridItem xs={12} sm={12} md={4} key={i}>
                   <Card plain>
                     <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
                       <img
