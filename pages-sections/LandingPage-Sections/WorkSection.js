@@ -17,49 +17,38 @@ const useStyles = makeStyles(styles);
 export default function WorkSection() {
   const classes = useStyles();
   return (
-    <div className={classes.section} id='contact'>
+    <div className={classes.section} id='contact' style={{paddingTop:0, paddingBottom:'100px'}}>
       <GridContainer justify="center">
         <GridItem cs={12} sm={12} md={8}>
           <h2 className={classes.title}>Contact</h2>
-          <h4 className={classes.description}>
-            If your intersted in one of our offers let us know by
-            writing us a message down below and we will contact you in
-            the shortest time posible or call us at: 123 456 789
-          </h4>
+          <h5 className={classes.title}>Address: Acriș, nr.7A, 507246</h5>
+          <h5 className={classes.title}>Telephone: 0765047941</h5>
+          <h5 className={classes.title}>
+            <span>Bookings:</span>
+            <a 
+              href="https://www.booking.com/hotel/ro/casa-iager.ro.html"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {`-->> click <-- `}
+            </a>
+            <span>for bookings</span>
+          </h5>         
           <form>
             <GridContainer>
-              <GridItem xs={12} sm={12} md={6}>
-                <CustomInput
-                  labelText="Your Name"
-                  id="name"
-                  formControlProps={{
-                    fullWidth: true
-                  }}
-                />
-              </GridItem>
-              <GridItem xs={12} sm={12} md={6}>
-                <CustomInput
-                  labelText="Your Email"
-                  id="email"
-                  formControlProps={{
-                    fullWidth: true
-                  }}
-                />
-              </GridItem>
-              <CustomInput
-                labelText="Your Message"
-                id="message"
-                formControlProps={{
-                  fullWidth: true,
-                  className: classes.textArea
-                }}
-                inputProps={{
-                  multiline: true,
-                  rows: 5
-                }}
-              />
-              <GridItem xs={12} sm={12} md={4} className={classes.textCenter}>
-                <Button color="primary">Send Message</Button>
+              <GridItem xs={12} sm={12} md={12}>
+                <div style={{height:'300px'}}>
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2789.2439317348817!2d25.99895161188659!3d45.645922909636106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b37dd2989f9caf%3A0xca0192e507898f2f!2sCasa%20Iager!5e0!3m2!1sro!2sro!4v1694023762309!5m2!1sro!2sro" 
+                  width="100%" 
+                  height="100%" 
+                  frameBorder="0"
+                  scrolling="yes"
+                  allowFullScreen={true}
+                  loading="lazy" 
+                  referrerPolicy="no-referrer-when-downgrade">      
+                </iframe>
+                </div>
               </GridItem>
             </GridContainer>
           </form>

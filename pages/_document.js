@@ -9,11 +9,11 @@ class MyDocument extends Document {
         <Head>
           <meta charSet="utf-8" />
           <meta name="theme-color" content="#000000" />
-          <link rel="shortcut icon" href="/img/casa-iagar.jpg" />
+          <link rel="shortcut icon" href="/img/casa-iager.png" />
           <link
             rel="apple-touch-icon"
             sizes="76x76"
-            href="/img/casa-iagar.jpg"
+            href="/img/casa-iager.png"
           />
           {/* Fonts and icons */}
           <link

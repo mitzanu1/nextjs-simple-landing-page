@@ -68,7 +68,7 @@ export default function Header(props) {
   const brandComponent = (
     <Link href="/">
       <img 
-        src='/img/casa-iagar.jpg'
+        src='/img/casa-iager.jpg'
         alt='Logo'
         style={{width:'75px', height:'75px', borderRadius:'50%'}}
         />

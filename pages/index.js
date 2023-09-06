@@ -48,21 +48,20 @@ export default function LandingPage(props) {
         <div className={classes.container}>
           <GridContainer>
             <GridItem xs={12} sm={12} md={6}>
-              <h1 className={classes.title}>A greating or something</h1>
+              <h1 className={classes.title}>Welcome to Casa Iager</h1>
               <h4>
-                Some text to make people curios about your 
-                website and make them scroll to the next sections.
+               { `We offer high quality bed and breakfast services at very accessible prices.
+                If your interested, take a look below at what we are offering.`}
               </h4>
               <br />
               <Button
                 color="danger"
                 size="lg"
-                href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ref=creativetim"
+                href="https://www.booking.com/hotel/ro/casa-iager.ro.html"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fas fa-play" />
-                Watch video
+                Booking
               </Button>
             </GridItem>
           </GridContainer>

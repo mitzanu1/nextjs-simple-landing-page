@@ -66,7 +66,7 @@ export default function HeaderLinks(props) {
           classes={{ tooltip: classes.tooltip }}
         >
           <Button
-            href="https://www.facebook.com/alin.iager"
+            href="https://twitter.com/CasaIager"
             target="_blank"
             color="transparent"
             className={classes.navLink}
@@ -84,7 +84,7 @@ export default function HeaderLinks(props) {
         >
           <Button
             color="transparent"
-            href="https://www.facebook.com/alin.iager"
+            href="https://www.facebook.com/profile.php?id=61550924967362&mibextid=D4KYlr"
             target="_blank"
             className={classes.navLink}
           >
@@ -101,7 +101,7 @@ export default function HeaderLinks(props) {
         >
           <Button
             color="transparent"
-            href="https://www.facebook.com/alin.iager"
+            href="https://www.instagram.com/casaiager/"
             target="_blank"
             className={classes.navLink}
           >
