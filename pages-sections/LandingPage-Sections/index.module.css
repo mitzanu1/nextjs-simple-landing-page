@@ -1,0 +1,19 @@
+.score {
+  display:flex;
+  justify-content:space-between
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+.icoWrap {
+  display:flex;
+  justify-content:flex-start
+}
+
+.icoWrap p {
+  margin-left: 1rem;
+  color:rgb(61, 203, 61)
+}
