@@ -73,6 +73,15 @@ export default function LandingPage(props) {
               >
                 {t('booking')}
               </Button>              
+              <Button
+                color="warning"
+                size="lg"
+                href="https://muntii-nostri.ro/ro/trasee?field_tour_type_tid=20&field_regions_target_id_selective=264072&field_regions_target_id_selective_2=All&field_difficulty_tid=All&uid=muntii%20nostri&uid_1="
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {t('tourist-routes')}
+              </Button>              
             </GridItem>
           </GridContainer>
         </div>
