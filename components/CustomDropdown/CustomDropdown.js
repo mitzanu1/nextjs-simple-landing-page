@@ -69,18 +69,8 @@ export default function CustomDropdown(props) {
     [classes.noLiPadding]: noLiPadding,
     [classes.dropdownItemRTL]: rtlActive
   });
-  let icon = null;
-  switch (typeof buttonIcon) {
-    case "object":
-      icon = <props.buttonIcon className={classes.buttonIcon} />;
-      break;
-    case "string":
-      icon = <Icon className={classes.buttonIcon}>{props.buttonIcon}</Icon>;
-      break;
-    default:
-      icon = null;
-      break;
-  }
+  let icon = <Icon className={classes.buttonIcon}>{buttonIcon}</Icon>
+  
   return (
     <div>
       <div>

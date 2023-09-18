@@ -19,20 +19,63 @@ import CustomDropdown from "/components/CustomDropdown/CustomDropdown.js";
 import Button from "/components/CustomButtons/Button.js";
 
 import styles from "/styles/jss/nextjs-material-kit/components/headerLinksStyle.js";
+import { useTranslation } from "next-i18next";
+import { RO, GB } from "country-flag-icons/react/3x2"
 
 const useStyles = makeStyles(styles);
 
 export default function HeaderLinks(props) {
   const classes = useStyles();
+  const {t, i18n} = useTranslation()
+  const clientSideLanguageChange = (newLocale) => {
+    i18n.changeLanguage(newLocale);
+  }
+ 
+  const ico = i18n.resolvedLanguage === 'ro' ? 
+    <RO style={{paddingBottom:'6px'}}/> :
+    <GB style={{paddingBottom:'6px'}}/>
+
   return (
     <List className={classes.list}>
+      <ListItem className={classes.listItem}>
+      <CustomDropdown
+          noLiPadding
+          navDropdown
+          buttonIcon={ico}
+          buttonText={t("lang")}
+          buttonProps={{
+            className: classes.navLink,
+            color: "transparent"
+          }}
+          dropdownList={[
+              <div 
+                className={classes.dropdownLink}
+                onClick={()=>clientSideLanguageChange("ro")}  
+                >
+                <RO 
+                  title="Romanian"
+                  style={{width:'15px'}}
+                /> Romanian
+              </div>,
+              <div
+                className={classes.dropdownLink}
+                onClick={()=>clientSideLanguageChange("en")}  
+              >
+              <GB 
+                title='English'
+                style={{width:'15px'}}
+              /> English
+              </div>
+          ]}
+        />
+      </ListItem>
       <ListItem className={classes.listItem}>
         <Button
           href="/#service"
           color="transparent"
           className={classes.navLink}
         >
-          Services
+          {t("Services")}
         </Button>
       </ListItem>
       <ListItem className={classes.listItem}>
@@ -41,7 +84,7 @@ export default function HeaderLinks(props) {
           color="transparent"
           className={classes.navLink}
         >
-          Gallery
+          {t("Gallery")}
         </Button>
       </ListItem>
       <ListItem className={classes.listItem}>
@@ -50,7 +93,7 @@ export default function HeaderLinks(props) {
           color="transparent"
           className={classes.navLink}
         >
-          Contact
+          {t("Contact")}
         </Button>
       </ListItem>
       <ListItem className={classes.listItem}>
@@ -61,7 +104,7 @@ export default function HeaderLinks(props) {
         </Tooltip>*/}
         <Tooltip
           id="instagram-twitter"
-          title="Follow us on twitter"
+          title={`${t("Follow-us-on")} twitter`}
           placement={"top"}
           classes={{ tooltip: classes.tooltip }}
         >
@@ -78,7 +121,7 @@ export default function HeaderLinks(props) {
       <ListItem className={classes.listItem}>
         <Tooltip
           id="instagram-facebook"
-          title="Follow us on facebook"
+          title={`${t("Follow-us-on")} facebook`}
           placement={"top"}
           classes={{ tooltip: classes.tooltip }}
         >
@@ -95,7 +138,7 @@ export default function HeaderLinks(props) {
       <ListItem className={classes.listItem}>
         <Tooltip
           id="instagram-tooltip"
-          title="Follow us on instagram"
+          title={`${t("Follow-us-on")} instagram`}
           placement={"top"}
           classes={{ tooltip: classes.tooltip }}
         >

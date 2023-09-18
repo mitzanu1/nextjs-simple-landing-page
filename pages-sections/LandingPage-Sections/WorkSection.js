@@ -10,21 +10,25 @@ import GridItem from "/components/Grid/GridItem.js";
 import CustomInput from "/components/CustomInput/CustomInput.js";
 import Button from "/components/CustomButtons/Button.js";
 
+import { useTranslation } from "next-i18next";
+
 import styles from "/styles/jss/nextjs-material-kit/pages/landingPageSections/workStyle.js";
 
 const useStyles = makeStyles(styles);
 
 export default function WorkSection() {
   const classes = useStyles();
+  const {t} = useTranslation()
+
   return (
     <div className={classes.section} id='contact' style={{paddingTop:0, paddingBottom:'100px'}}>
       <GridContainer justify="center">
         <GridItem cs={12} sm={12} md={8}>
-          <h2 className={classes.title}>Contact</h2>
-          <h5 className={classes.title}>Address: Acriș, nr.7A, 507246</h5>
-          <h5 className={classes.title}>Telephone: 0765047941</h5>
+          <h2 className={classes.title}>{t("Contact")}</h2>
+          <h5 className={classes.title}>{`${t('Address')}: Acriș, nr.7A, 507246`}</h5>
+          <h5 className={classes.title}>{`${t('Telephone')}: 0765047941`}</h5>
           <h5 className={classes.title}>
-            <span>Bookings:</span>
+            <span>{t("Bookings")}:</span>
             <a 
               href="https://www.booking.com/hotel/ro/casa-iager.ro.html"
               target="_blank"
@@ -32,7 +36,7 @@ export default function WorkSection() {
             >
               {`-->> click <-- `}
             </a>
-            <span>for bookings</span>
+            <span>{t('for-bookings')}</span>
           </h5>         
           <form>
             <GridContainer>

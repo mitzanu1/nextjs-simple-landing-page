@@ -23,13 +23,24 @@ import ProductSection from "/pages-sections/LandingPage-Sections/ProductSection.
 import WorkSection from "/pages-sections/LandingPage-Sections/WorkSection.js";
 import GallerySection from "../pages-sections/LandingPage-Sections/GallerySection";
 
+// Translation
+import { useTranslation } from 'next-i18next'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+
 const dashboardRoutes = [];
 
 const useStyles = makeStyles(styles);
 
 export default function LandingPage(props) {
+
+  const { t, i18n } = useTranslation('common')
   const classes = useStyles();
   const { ...rest } = props;
+  const clientSideLanguageChange = (newLocale) => {
+    i18n.changeLanguage(changeTo);
+  }
+ 
+  const changeTo = i18n.resolvedLanguage === 'ro' ? 'en' : 'ro'
   return (
     <div>
       <Header
@@ -44,14 +55,13 @@ export default function LandingPage(props) {
         }}
         {...rest}
       />
-      <Parallax filter responsive image="/img/munte.jpg">
+      <Parallax filter responsive image="/img/hero.jpg">
         <div className={classes.container}>
           <GridContainer>
             <GridItem xs={12} sm={12} md={6}>
-              <h1 className={classes.title}>Welcome to Casa Iager</h1>
+              <h1 className={classes.title}>{t('title')}</h1>
               <h4>
-               { `We offer high quality bed and breakfast services at very accessible prices.
-                If your interested, take a look below at what we are offering.`}
+               {t('title-desc')}
               </h4>
               <br />
               <Button
@@ -61,8 +71,8 @@ export default function LandingPage(props) {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Booking
-              </Button>
+                {t('booking')}
+              </Button>              
             </GridItem>
           </GridContainer>
         </div>
@@ -77,4 +87,12 @@ export default function LandingPage(props) {
       <Footer />
     </div>
   );
+}
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+    ...(await serverSideTranslations(locale, ['common', 'footer'], null, ['en', 'ro'])),
+    },
+  };
 }

@@ -1,7 +1,7 @@
 {
-  "name": "next-material-kit",
-  "version": "1.2.2",
-  "description": "NextJS Version of Material Kit React by Creative Tim (https://creative-tim.com)",
+  "name": "casa-iager",
+  "version": "1.0",
+  "description": "simple b&b landing page",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,42 +10,35 @@
     "start": "next start",
     "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && rm -rf .next/ && npm install && npm run dev"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/creativetimofficial/nextjs-material-kit.git"
-  },
   "keywords": [
     "next",
     "nextjs",
     "react",
     "reactjs",
-    "npx",
-    "material",
-    "material-design",
-    "material-kit",
-    "material-kit-react",
-    "next-material-kit"
+    "casa-iager",
+    "b&b",
+    "bed and breakfast"
   ],
-  "author": "Creative Tim",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/creativetimofficial/nextjs-material-kit/issues"
-  },
-  "homepage": "https://demos.creative-tim.com/nextjs-material-kit",
+  "author": "CODEN TECHIE",
   "dependencies": {
     "@material-ui/core": "4.11.4",
     "@material-ui/icons": "4.11.3",
     "classnames": "2.3.2",
+    "country-flag-icons": "^1.5.7",
+    "i18next": "^23.5.1",
+    "material-ui-flags": "^1.2.4",
     "moment": "2.29.4",
     "next": "12.2.5",
+    "next-i18next": "^14.0.3",
     "nouislider": "14.7.0",
     "prop-types": "15.8.1",
-    "react": "18.2.0",
+    "react": ">=16.0.0",
     "react-datetime": "3.1.1",
-    "react-dom": "18.2.0",
+    "react-dom": ">=16.0.0",
+    "react-i18next": "^13.2.2",
     "react-slick": "0.29.0",
-    "styled-components": "5.3.5",
     "sass": "1.66.1",
+    "styled-components": "5.3.5",
     "webpack": "5.88.2"
   },
   "peerDependencies": {
