@@ -26,6 +26,7 @@ import GallerySection from "../pages-sections/LandingPage-Sections/GallerySectio
 // Translation
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import Parteners from "../pages-sections/LandingPage-Sections/PartenersSection";
 
 const dashboardRoutes = [];
 
@@ -90,6 +91,7 @@ export default function LandingPage(props) {
         <div className={classes.container}>
           <ProductSection />
           <GallerySection />
+          <Parteners/>
           <WorkSection />
         </div>
       </div>
