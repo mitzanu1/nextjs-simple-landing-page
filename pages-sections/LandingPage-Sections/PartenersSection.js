@@ -32,7 +32,7 @@ const parteneri = [
 },
 {
   img:"/img/infovama.png",
-  src:'https://gastrolocal.ro/',
+  src:'https://infovamabuzaului.ro/',
   description:'Info Tur'
 },
 {
