@@ -40,6 +40,21 @@ const parteneri = [
   src:'https://www.turistinfo.ro/vama_buzaului/cazare-vama_buzaului/casa_iager-c123843.html',
   description:'Turist Info'
 },
+{
+  img:"/img/brasovturism.png",
+  src:'https://brasovtourism.app/',
+  description:'Brasov Turism'
+},
+{
+  img:"/img/brsovghid.png",
+  src:'https://www.ghid-brasov.ro/',
+  description:'Ghid Brasov'
+},
+{
+  img:"/img/octeus.png",
+  src:'https://octeus.ro/destinatii/lacul-siriu/',
+  description:'Lacul Siriu'
+},
 ]
 
 
@@ -57,14 +72,14 @@ export default function Parteners() {
           parteneri.map((item)=>{
             const {img, src, description} = item
             return (
-              <GridItem cs={4} sm={4} md={4}> 
+              <GridItem cs={4} sm={4} md={4} key={description}> 
                 <div className='prt'>
-                  <img src={img} className='prt-img'/>
                   <a 
                     href={src}  
-                    rel='noreferrer'
+                    rel="noopener noreferrer"
                     target='_blank'
                   >
+                    <img src={img} className='prt-img'/>
                     {description}
                   </a>
                 </div>      
@@ -72,9 +87,32 @@ export default function Parteners() {
             )
           })
         }
-
-      
-  
+      </GridContainer>
+      <GridContainer justify="center">
+        <GridItem cs={4} sm={4} md={4}>
+            <div className='prt'>
+              <a 
+                href='https://rom.harmaninfo.com/home'  
+                rel="noopener noreferrer"
+                target='_blank'
+                >
+                  <img src="/img/bisericaharman.png" className='prt-img'/>
+                  Biserica Harman
+              </a>
+            </div>  
+          </GridItem>
+        <GridItem cs={4} sm={4} md={4}>
+            <div className='prt'>
+              <a 
+                href='https://bisericafortificataprejmer.ro/'  
+                rel="noopener noreferrer"
+                target='_blank'
+                >
+                  <img src='/img/bisericaperjmer.png' className='prt-img'/>
+                  Biserica Prejmer
+              </a>
+            </div>  
+          </GridItem>
       </GridContainer>
     </div>
   );

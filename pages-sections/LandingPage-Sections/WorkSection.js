@@ -38,7 +38,17 @@ export default function WorkSection() {
                 {`-->> click <-- `}
               </a>
               <span>{t('for-bookings')}</span>
-            </h5>         
+            </h5>   
+              <a 
+                className='whatsapp'
+                aria-label="Chat on WhatsApp" 
+                href="https://wa.me/40765047941"
+              > 
+                <img 
+                  alt="Chat on WhatsApp" 
+                  src="/img/whatsapp.png" 
+                />
+              </a>     
             </div>
           <form>
             <GridContainer>
